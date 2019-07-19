@@ -1,2 +1,0 @@
-class Park < ApplicationRecord
-end
