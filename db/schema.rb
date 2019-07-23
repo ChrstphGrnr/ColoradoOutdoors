@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_07_18_230231) do
     t.string "location", array: true
     t.string "description"
     t.string "images", array: true
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

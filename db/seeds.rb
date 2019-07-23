@@ -9,6 +9,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+
+# Recreation.gov API call
+
+
 i = 1
 
 loop do
@@ -37,5 +43,25 @@ loop do
     break       # this will cause execution to exit the loop
   end
 end
+
+
+# NPS API call
+
+ 
+response = RestClient::Request.execute(
+    method: :get,
+    url: "https://developer.nps.gov/api/v1/parks?stateCode=CO&limit=100&api_key=J0Nab0nguAmrcSZXNGebXAodf3jsDYSeTu9xb2qy&fields=images",
+    accept: 'application/json'
+    )
+
+ attractions = JSON.parse(response)
+
+ attractions['data'].map do |attraction|
+    name = attraction['fullName']
+    description = attraction['description']
+    location = [attraction['latLong'][0], attraction['latLong'][1] ]
+    images = attraction['images'].map{|image| image['URL']}
+    newAttractions = Attraction.create(name: name, description: description, location: location, images: images)
+ end
 
 
