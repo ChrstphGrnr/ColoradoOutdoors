@@ -31,8 +31,8 @@ loop do
         name = attraction['RecAreaName']
         description = attraction['RecAreaDescription']
         location = [] 
-        location << attraction['RecAreaLongitude'] 
         location << attraction['RecAreaLatitude']
+        location << attraction['RecAreaLongitude'] 
         images = attraction['MEDIA'].map{|image| image['URL']} 
         newAttractions = Attraction.create(name: name, description: description, location: location, images: images)
     end
@@ -43,6 +43,13 @@ loop do
     break       # this will cause execution to exit the loop
   end
 end
+
+# RegEx to delete all HTML Tags from description
+# Attraction.all[0].description.gsub(/<\/?[^>]*>/, "")
+
+# RegEx to delete "\r" from descripton
+# Attraction.all[0].description.gsub(/(\r)/,'')
+
 
 
 # NPS API call
@@ -59,8 +66,8 @@ response = RestClient::Request.execute(
  attractions['data'].map do |attraction|
     name = attraction['fullName']
     description = attraction['description']
-    location = [attraction['latLong'][0], attraction['latLong'][1] ]
-    images = attraction['images'].map{|image| image['URL']}
+    location = [attraction['latLong'][/[-.0-9]{11,}/], attraction['latLong'][/[-.0-9]{11,}$/] ]
+    images = attraction['images'].map{|image| image['url']}
     newAttractions = Attraction.create(name: name, description: description, location: location, images: images)
  end
 
