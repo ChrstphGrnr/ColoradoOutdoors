@@ -16,6 +16,7 @@ gem 'puma', '~> 3.11'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rest-client'
+gem 'foreman', '~> 0.82.0'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
