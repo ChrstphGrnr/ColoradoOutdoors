@@ -6,18 +6,18 @@ import AttractionIndex from './Components/Attractions/AttractionIndex'
 
 class App extends React.Component {
   
-  state = {
-    attractions: []
-  }
+  // state = {
+  //   attractions: []
+  // }
 
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/attractions')
-    .then(resp => resp.json())
-    .then(json => this.setState({
-      attractions: json
-    }))
-    // debugger
-  }
+  // componentDidMount() {
+  //   fetch('http://localhost:3001/api/v1/attractions')
+  //   .then(resp => resp.json())
+  //   .then(json => this.setState({
+  //     attractions: json
+  //   }))
+  //   // debugger
+  // }
 
   render() {
   return (
