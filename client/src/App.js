@@ -1,37 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import AttractionIndex from './components/Attractions/AttractionIndex'
+import AttractionIndex from './containers/AttractionIndex'
+import Navigation from './components/Navbar'
+import Container from 'react-bootstrap/Container'
+import {Route} from 'react-router-dom'
+import AttractionShow from './components/Attractions/AttractionShow'
+import About from './components/About'
+
 
 
 class App extends React.Component {
   
-  // state = {
-  //   attractions: []
-  // }
-
-  // componentDidMount() {
-  //   fetch('http://localhost:3001/api/v1/attractions')
-  //   .then(resp => resp.json())
-  //   .then(json => this.setState({
-  //     attractions: json
-  //   }))
-  //   // debugger
-  // }
-
   render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div className="App">
-           <AttractionIndex />
-        </div>
-        
-      </header>
+        <div>
+        <Container style={{ width: '58rem' }}>
+          <Navigation sticky="top"/>
+            <Route exact path="/" component={AttractionIndex} />   
+            <Route exact path="/attractions/:name" component={AttractionShow} />
+            <Route exact path="/about" component={About} />         
+        </Container>
+      </div>
     </div>
   );
 }
 }
 
 export default App;
+
+
