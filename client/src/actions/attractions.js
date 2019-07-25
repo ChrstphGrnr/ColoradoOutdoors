@@ -1,6 +1,5 @@
 // import attractions from "../reducers/attractions";
 
-
 // async action
 export const fetchAttractions = () => {
     return (dispatch) => {
