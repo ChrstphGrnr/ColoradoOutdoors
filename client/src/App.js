@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AttractionIndex from './Components/Attractions/AttractionIndex'
+import AttractionIndex from './components/Attractions/AttractionIndex'
 
 
 class App extends React.Component {
@@ -24,8 +24,8 @@ class App extends React.Component {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>
-           <AttractionIndex attractions={this.state.attractions} />
+        <div className="App">
+           <AttractionIndex />
         </div>
         
       </header>

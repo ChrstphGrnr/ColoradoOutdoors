@@ -3,6 +3,9 @@ import Attraction from './Attraction'
 
 class AttractionIndex extends Component {
 
+    componentDidMount() {
+        
+    }
 
     render() {
         console.log(this.props)
