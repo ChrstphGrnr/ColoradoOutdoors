@@ -19,7 +19,9 @@ class App extends React.Component {
           <Navigation sticky="top"/>
             <Route exact path="/" component={AttractionIndex} />   
             <Route exact path="/attractions/:name" component={AttractionShow} />
-            <Route exact path="/about" component={About} />         
+            <Route exact path="/about" component={About} />     
+            <Route exact path="/attractions" component={AttractionIndex}  />
+            <Route exact path="/comments" component={AttractionIndex} />
         </Container>
       </div>
     </div>
