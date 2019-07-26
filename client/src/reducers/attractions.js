@@ -4,7 +4,7 @@ export default (state = [], action) => {
      case "COMMENCE_ATTRACTION_FETCH":
         console.log("we are about to send fetch request")
         return state
-    case "SET_MON":
+    case "SET_ATTRACTIONS":
         return action.attractions
         
      default:
