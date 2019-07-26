@@ -22,7 +22,7 @@ class AttractionIndex extends Component {
                 <div >
                     <Row>
                         <Col>
-                        {this.props.attractions.map(attraction => <AttractionCard attraction={attraction} />)}   
+                        {this.props.attractions.map(attraction => <AttractionCard id={attraction.id} attraction={attraction} />)}   
                         </Col>
                     </Row>
                 </div>
