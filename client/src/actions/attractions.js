@@ -11,12 +11,3 @@ export const fetchAttractions = () => {
 
        };
 }
-
-
-
- // action creator
-export const setSearch = (searchTerm) =>{
-    return{
-        type:"SET_SEARCH", search:searchTerm
-    }
-} 
