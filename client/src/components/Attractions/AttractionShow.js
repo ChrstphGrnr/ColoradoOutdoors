@@ -25,9 +25,6 @@ const AttractionShow = (props) => {
                             <ul>
                               {attraction.comments.map(comment => <CommentShow comment={comment} /> )}
                             </ul>
-                        <Button>
-                            Delete
-                        </Button>
                     </Card.Body>
                 </Card>
             </div>

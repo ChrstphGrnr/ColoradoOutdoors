@@ -17,6 +17,7 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rest-client'
 gem 'foreman', '~> 0.82.0'
+gem 'pry'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
