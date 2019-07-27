@@ -2,9 +2,7 @@ import React from 'react';
 
 
 
-const CommentShow = (props) => {
-        // debugger
-        
+const CommentShow = (props) => {  
         return (
             <div>
                 <h5>
@@ -17,6 +15,5 @@ const CommentShow = (props) => {
             </div>
         );
 }
-
 
 export default CommentShow;
