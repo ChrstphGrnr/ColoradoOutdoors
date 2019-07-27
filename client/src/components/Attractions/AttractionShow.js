@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import CommentShow from '../Comments/CommentShow'
-
+import CommentContainer from '../../containers/CommentContainer'
 
 const AttractionShow = (props) => {
         // debugger
@@ -11,9 +9,11 @@ const AttractionShow = (props) => {
             <div>
             {console.log(props.location.state)}
                 <Card id={attraction.id} className="bg-dark text-white" style={{ width: '56rem'}}>
-                    <Card.Img variant="top" src={attraction.images[1]} />
+
+                    {attraction.images.map(image => <Card.Img variant="top" src={image} /> )}
+                   
                     <br/>
-                    <Card.Img variant="top" src={attraction.images[0]} />
+                   
                     <Card.Body>
                         <Card.Title >{attraction.name}</Card.Title>
                         <Card.Text >
@@ -22,9 +22,12 @@ const AttractionShow = (props) => {
                         </Card.Text>
                         <br/>
                         <br/>
-                            <ul>
-                              {attraction.comments.map(comment => <CommentShow comment={comment} /> )}
+                        <CommentContainer attractionId={attraction.id} />
+                            
+                            {/* <ul>
+                              {attraction.comments.map(comment=> <CommentShow key={comment.id} comment={comment} /> )}
                             </ul>
+                        <CommentForm attractionId={attraction.id} /> */}
                     </Card.Body>
                 </Card>
             </div>
