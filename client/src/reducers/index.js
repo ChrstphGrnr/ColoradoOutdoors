@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
-import attraction from './attractions';
-// import search from './search';
-import comment from './comment'
+import attractions from './attractions';
+import search from './search';
+// import comment from './comment'
 
  export default combineReducers({
-  attraction,
-  // search, 
-  comment
+  attractions,
+  search
 }); 
