@@ -36,7 +36,7 @@ class Navigation extends Component {
               </NavDropdown>
              </Nav>
             </Navbar.Collapse>
-            <Search onSearchChange={_.debounce(this.search, 500)} showNoResults={false} type="text" placeholder="Search" className="mr-sm-3" />
+            <Search onSearchChange={_.debounce(this.search, 500)} showNoResults={false} type="text" placeholder="Search" className="sm" />
         </Navbar>
         </div>
         );
