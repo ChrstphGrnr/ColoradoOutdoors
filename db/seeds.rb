@@ -22,7 +22,7 @@ loop do
     response = RestClient::Request.execute(
         method: :get, 
         url: 'https://ridb.recreation.gov/api/v1/recareas', 
-        headers: { :params => {apikey: 'ed234cd0-ce5d-4190-96a0-52cd166e52bc', full: 'true', state: 'CO', offset: i}} 
+        headers: { :params => {apikey: "#{<%= Rails.application.credentials.api[:rec_key]}", full: 'true', state: 'CO', offset: i}} 
     )
 
     attractions = JSON.parse(response)
@@ -57,7 +57,7 @@ end
  
 response = RestClient::Request.execute(
     method: :get,
-    url: "https://developer.nps.gov/api/v1/parks?stateCode=CO&limit=100&api_key=J0Nab0nguAmrcSZXNGebXAodf3jsDYSeTu9xb2qy&fields=images",
+    url: "https://developer.nps.gov/api/v1/parks?stateCode=CO&limit=100&api_key=#{<%= Rails.application.credentials.api[:nps_key]}&fields=images",
     accept: 'application/json'
     )
 
