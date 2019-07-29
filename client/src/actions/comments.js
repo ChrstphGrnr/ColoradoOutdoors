@@ -20,4 +20,3 @@ export const addComment = (comment, attractionId) => {
     } 
 }
 
-
