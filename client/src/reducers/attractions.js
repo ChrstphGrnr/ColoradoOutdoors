@@ -16,8 +16,6 @@ export default (state = [], action) => {
             }
         }
         )
-        // debugger
-        // return {...state, attractions: attractions}
         return attractions
         
      default:
