@@ -54,7 +54,8 @@ Here are a few requirements you need to be aware of.
     ```/config/database.yml``` 
 
 * Once the above dependencies are resolved, please run ```npm install ``` followed by ```rake db:migrate``` followed by ```rake db:seed``` 
-* After that there is a simple rake task set up to run both the rails backend and the react front end: ```rake start```
+* Lastly: Custom rake task ```rake start``` to start both frond and backend local servers. 
+* Then navigate to localhost:3000 to find the app
 
 ### Questions/Comments 
 
