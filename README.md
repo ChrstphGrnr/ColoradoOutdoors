@@ -1,24 +1,67 @@
-# README
+# COLORADO TRAILS readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to ColoradoOutdoors!
+An App to explore all the great Outdoor Activities Colorado has to offer. 
 
-Things you may want to cover:
+This is the 5th and final project in Flatiron School's Online Software Developer Program. 
+The front end is composed entirely of a React/Redux codebase with a Rails/PostgreSQL on the backend. 
+2 external APIs supply the data to showcase the Attractions, 
 
-* Ruby version
+## Authors
 
-* System dependencies
+Christoph Gruener - https://www.linkedin.com/in/christoph-gruener - https://www.github.com/chrstphgrnr
 
-* Configuration
+## External API Data
 
-* Database creation
+https://www.Recreation.gov
+https://www.NationalParkService.gov
 
-* Database initialization
+## License 
 
-* How to run the test suite
+This project is licensed under the MIT license. 
 
-* Services (job queues, cache servers, search engines, etc.)
+https://opensource.org/licenses/MIT
 
-* Deployment instructions
+## Contributors
 
-* ...
+A big thanks goes to Vinh. https://github.com/BebopVinh
+Trouble shooting par excellence! 
+
+And as always, Alex Aguilar. https://github.com/bosskey59
+Best cohort lead ever. 
+
+
+
+
+
+If you would like to fork this repo, feel free to explore it and play with it. 
+Here are a few requirements you need to be aware of. 
+
+
+## Install/Dependencies
+
+* Ruby version needed - 2.6.3
+* Ruby on Rails version '~> 5.2.x'
+* Node Package Manager needs to be installed
+* PostgreSQL server needs to be set up and running - please refer to database.yml for information on the specific names for the database
+* Postman is always helpful when making API calls
+* You will need your own National Parks Service API and Recreation.gov API keys
+* This repo does not include the master.key file - you will need to create your own
+    In short, once you forked and cloned this repo locally, run 'EDITOR=vim rails credentials:edit 
+    This will create your master.key file and open your credentials.yml.enc file. 
+    Please adjust the calls to credentials.yml.enc in the following files. 
+    ```/db/seed.rb``` 
+    ```/config/database.yml``` 
+
+* Once the above dependencies are resolved, please run ```rake db:migrate``` followed by ```rake db:seed``` 
+* After that there is a simple rake task set up to run both the rails backend and the react front end: ```rake start```
+
+### Questions/Comments 
+
+Feel free to reach out on Github or LinkedIn. 
+
+
+
+
+
+
