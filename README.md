@@ -1,4 +1,4 @@
-# COLORADO TRAILS readme
+# COLORADO OUTDOORS readme
 
 Welcome to ColoradoOutdoors!
 An App to explore all the great Outdoor Activities Colorado has to offer. 
