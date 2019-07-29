@@ -4,8 +4,12 @@ import { fetchAttractions} from '../actions/attractions'
 import { connect } from 'react-redux';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Navigation from '../components/Navbar'
+import setSearch from '../actions/search'
+
 
 class AttractionIndex extends Component {
+
 
     componentDidMount() {
         this.props.fetchAttractions();
@@ -15,6 +19,7 @@ class AttractionIndex extends Component {
         const attractions = this.props.attractions.filter(attraction => attraction.name.includes(this.props.searchTerm))
             return (
                 <div >
+                    <Navigation setSearch={this.props.setSearch} search='true' sticky="top"/>
                     <Row>
                         <Col>
                         {attractions.map(attraction => <AttractionCard key={attraction.id} id={attraction.id} attraction={attraction} />)}   
@@ -34,7 +39,7 @@ class AttractionIndex extends Component {
     const mapDispatchToProps = dispatch =>{
      return{
        fetchAttractions: () => dispatch(fetchAttractions()),
-     //   setSearch: (searchTerm) => dispatch(setSearch(searchTerm))
+       setSearch: (searchTerm) => dispatch(setSearch(searchTerm))
      }
     
     }
