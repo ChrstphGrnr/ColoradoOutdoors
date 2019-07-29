@@ -4,7 +4,7 @@ export const addComment = (comment, attractionId) => {
         const commentContent = {...comment, attraction_id}
 
         return (dispatch) => {
-            return fetch('http://localhost:3001/api/v1/comments', {
+            return fetch('https://colorado-outdoors.herokuapp.com/api/v1/comments', {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json', 
