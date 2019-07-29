@@ -53,7 +53,7 @@ Here are a few requirements you need to be aware of.
     ```/db/seed.rb``` 
     ```/config/database.yml``` 
 
-* Once the above dependencies are resolved, please run ```npm start ``` followed by ```rake db:migrate``` followed by ```rake db:seed``` 
+* Once the above dependencies are resolved, please run ```npm install ``` followed by ```rake db:migrate``` followed by ```rake db:seed``` 
 * After that there is a simple rake task set up to run both the rails backend and the react front end: ```rake start```
 
 ### Questions/Comments 
