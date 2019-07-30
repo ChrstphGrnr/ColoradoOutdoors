@@ -22,6 +22,7 @@ const AttractionCard = (props) => {
                                   state: {attraction: attraction}} }>                    
                 <Button variant="primary">See this Attraction</Button>
                 </Link>
+                <Button onClick={() => props.hideAttraction(props.id)} variant="primary">Hide this Attraction</Button>
               </Card.Body>
             </Card>
             <br/>
