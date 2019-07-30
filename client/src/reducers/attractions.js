@@ -17,6 +17,16 @@ export default (state = [], action) => {
         }
         )
         return attractions
+    case "HIDE_ATTRACTION":
+        // debugger 
+        const newState = [];
+        const newAttractions = [...state];
+        newAttractions.filter( attraction => {
+            if (attraction.id !== action.attractionId) {
+                newState.push(attraction)
+            }
+        })
+        return newState;
         
      default:
         return state;
